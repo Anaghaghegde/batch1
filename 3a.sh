@@ -1,17 +1,12 @@
 if [ -e $1 ]
 then
-x=`ls -ld $1`
-p=1
-for i in $x
-do 
-case $p in
-1) echo "permission are $i";;
-2) echo "file link count is $i";;
-[6-8]) echo "file modification done on $5 $6 @ $7"
-esac
-p=`expr $p+1`
-echo $i
-done
+set -- `ls -l $1`
+echo "permissions are : $1"
+echo "links are : $2"
+echo "user: $3"
+echo "group user : $4"
+echo "date modifide : $5 $6 $7 at $8 "
+echo "file name : $9"
 else
-echo "file dose not exist"
-fi 
+echo "file not found!"
+fi

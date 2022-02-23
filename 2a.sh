@@ -13,14 +13,14 @@ fi
 if [ -e $file2 ]
 then
 set -- `ls -ld $file2`
-file2perm=$1
+file2perm=$2
 else
 echo "file dosent exit"
 exit
 fi
 
  
-if [ $file1perm=$file2perm ]
+if [ "$file1perm" = "$file2perm" ]
 then
 echo " file permission are identical"
 echo "permission is $file1perm"
@@ -29,3 +29,5 @@ echo " file permission are not identical"
 echo "permission is $file1perm"
 echo "permission is $file2perm"
 fi
+
+
