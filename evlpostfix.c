@@ -41,9 +41,7 @@ int eval()
                                       printf("Out of loop");
                                     }
 
-				/*case '^':
-					push(pow(op1,op2));
-					break;*/
+				
 				default :
 					printf("Invalid Operator");
 			}
